@@ -1,0 +1,51 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>3.0</ProductVersion>
+    <ProjectGuid>{4f5b643e-6c51-457b-8b2a-fdd7cde1ce35}</ProjectGuid>
+    <SchemaVersion>2.0</SchemaVersion>
+    <OutputName>WixContrib</OutputName>
+    <OutputType>Library</OutputType>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.0\Wix.targets</WixTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <DefineConstants>Debug</DefineConstants>
+    <LibBindFiles>True</LibBindFiles>
+    <LibAdditionalOptions>-b $(SolutionDir)WixContribSchedCA\bin\$(Configuration)
+-b $(SolutionDir)WixContribExecCA\bin\$(Configuration)</LibAdditionalOptions>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <LibBindFiles>True</LibBindFiles>
+    <LibAdditionalOptions>-b $(SolutionDir)WixContribSchedCA\bin\$(Configuration)
+-b $(SolutionDir)WixContribExecCA\bin\$(Configuration)</LibAdditionalOptions>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="WixContrib.wxs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WixContribExec\WixContribExec.vcproj">
+      <Name>WixContribExecCA</Name>
+      <Project>{9a6c47c4-36c6-4155-b446-aa629ced3016}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WixContribSched\WixContribSched.vcproj">
+      <Name>WixContribSchedCA</Name>
+      <Project>{230e2ef0-dcf8-4af8-bf68-0fb4c46d3818}</Project>
+      <Private>True</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
+  <!--
+	To modify your build process, add your task inside one of the targets below and uncomment it.
+	Other similar extension points exist, see Wix.targets.
+	<Target Name="BeforeBuild">
+	</Target>
+	<Target Name="AfterBuild">
+	</Target>
+	-->
+</Project>
