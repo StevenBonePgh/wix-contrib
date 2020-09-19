@@ -1,9 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WixContribSchedCA", "WixContribSchedCA\WixContribSchedCA.vcproj", "{230E2EF0-DCF8-4AF8-BF68-0FB4C46D3818}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30509.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ext", "ext", "{1BDF7275-DC11-4C75-8353-31BAD219BF5D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WixContribExecCA", "WixContribExecCA\WixContribExecCA.vcproj", "{9A6C47C4-36C6-4155-B446-AA629CED3016}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WixContribSchedCA", "WixContribSchedCA\WixContribSchedCA.vcxproj", "{230E2EF0-DCF8-4AF8-BF68-0FB4C46D3818}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WixContribExecCA", "WixContribExecCA\WixContribExecCA.vcxproj", "{9A6C47C4-36C6-4155-B446-AA629CED3016}"
 EndProject
 Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "WixContribWixlib", "WixContribWixlib\WixContribWixlib.wixproj", "{4F5B643E-6C51-457B-8B2A-FDD7CDE1CE35}"
 EndProject
@@ -11,8 +15,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WixContribExtension", "WixC
 	ProjectSection(ProjectDependencies) = postProject
 		{4F5B643E-6C51-457B-8B2A-FDD7CDE1CE35} = {4F5B643E-6C51-457B-8B2A-FDD7CDE1CE35}
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ext", "ext", "{1BDF7275-DC11-4C75-8353-31BAD219BF5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,9 +81,12 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{9A6C47C4-36C6-4155-B446-AA629CED3016} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
-		{03E2F8B2-04DF-4BE5-A77B-87FFF6A5BA88} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
 		{230E2EF0-DCF8-4AF8-BF68-0FB4C46D3818} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
+		{9A6C47C4-36C6-4155-B446-AA629CED3016} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
 		{4F5B643E-6C51-457B-8B2A-FDD7CDE1CE35} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
+		{03E2F8B2-04DF-4BE5-A77B-87FFF6A5BA88} = {1BDF7275-DC11-4C75-8353-31BAD219BF5D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A387D8C-4240-4D94-9AD4-535A38924361}
 	EndGlobalSection
 EndGlobal

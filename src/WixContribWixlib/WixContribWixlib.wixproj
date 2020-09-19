@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -7,7 +7,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <OutputName>WixContrib</OutputName>
     <OutputType>Library</OutputType>
-    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.0\Wix.targets</WixTargetsPath>
+    <WixTargetsPath Condition=" '$(WixTargetsPath)' == '' ">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <OutputPath>bin\$(Configuration)\</OutputPath>
@@ -28,12 +28,12 @@
     <Compile Include="WixContrib.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WixContribExec\WixContribExec.vcproj">
+    <ProjectReference Include="..\WixContribExecCA\WixContribExecCA.vcxproj">
       <Name>WixContribExecCA</Name>
       <Project>{9a6c47c4-36c6-4155-b446-aa629ced3016}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\WixContribSched\WixContribSched.vcproj">
+    <ProjectReference Include="..\WixContribSchedCA\WixContribSchedCA.vcxproj">
       <Name>WixContribSchedCA</Name>
       <Project>{230e2ef0-dcf8-4af8-bf68-0fb4c46d3818}</Project>
       <Private>True</Private>
